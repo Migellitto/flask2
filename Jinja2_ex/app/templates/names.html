@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Список пользователей{% endblock %}
+{% block content %}
+
+{% if name %}
+<p>Имя пользователя: {{ name }}</p>
+{% elif entities %}
+{% for name in entities %}
+<p>Имя: {{ name }}</p>
+{% endfor %}
+{% endif %}
+
+{% endblock %}
